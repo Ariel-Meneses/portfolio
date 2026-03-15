@@ -5,7 +5,7 @@ const T = {
     nav: ["About", "Services", "Stack", "Projects", "Contact"],
     available: "Available for new projects",
     role: "AI & Business Automation Consultant",
-    sub: "I help companies and startups automate processes, integrate AI, and build smarter digital systems — remotely, from Chile to the world.",
+    sub: "I automate critical processes for companies in Chile and the U.S. — faster teams, fewer manual errors, smarter decisions.",
     cta: "See My Work",
     cta2: "Let's Talk",
     about_label: "About Me",
@@ -26,6 +26,8 @@ const T = {
       { icon: "🌐", t: "Web Development", d: "Modern, fast websites and landing pages — from simple portfolios to full e-commerce implementations." },
       { icon: "🧠", t: "AI Integration", d: "Embed AI capabilities directly into your existing tools and workflows. No disruption, just enhancement." },
     ],
+    services_cta: "Get a Quote",
+    services_cta_sub: "Ready to automate? Let's map out your process and define a clear action plan.",
     stack_label: "Tech Stack",
     stack_title: "Tools I work with",
     stack_cats: [
@@ -81,7 +83,7 @@ const T = {
     nav: ["Sobre mí", "Servicios", "Stack", "Proyectos", "Contacto"],
     available: "Disponible para nuevos proyectos",
     role: "Consultor en IA y Automatización de Negocios",
-    sub: "Ayudo a empresas y emprendimientos a automatizar procesos, integrar IA y construir sistemas digitales más inteligentes — de forma remota, desde Chile al mundo.",
+    sub: "Automatizo procesos críticos para empresas en Chile y EEUU — equipos más rápidos, menos errores manuales, mejores decisiones.",
     cta: "Ver Proyectos",
     cta2: "Hablemos",
     about_label: "Sobre mí",
@@ -102,6 +104,8 @@ const T = {
       { icon: "🌐", t: "Desarrollo Web", d: "Sitios web y landing pages modernos y rápidos — desde portafolios simples hasta implementaciones completas de e-commerce." },
       { icon: "🧠", t: "Integración de IA", d: "Integra capacidades de IA directamente en tus herramientas y flujos de trabajo actuales. Sin interrupciones, solo mejoras." },
     ],
+    services_cta: "Cotizar Proyecto",
+    services_cta_sub: "¿Listo para automatizar? Revisamos tu proceso juntos y definimos un plan de acción concreto.",
     stack_label: "Stack Tecnológico",
     stack_title: "Herramientas con las que trabajo",
     stack_cats: [
@@ -265,9 +269,16 @@ export default function Portfolio() {
               <span key={i} className={`nav-item${active === sections[i] ? " on" : ""}`} onClick={() => go(sections[i])}>{n}</span>
             ))}
           </div>
-          <div style={{ display: "flex", gap: ".35rem" }}>
-            <button className={`lang-btn ${lang === "en" ? "lang-on" : "lang-off"}`} onClick={() => setLang("en")}>EN</button>
-            <button className={`lang-btn ${lang === "es" ? "lang-on" : "lang-off"}`} onClick={() => setLang("es")}>ES</button>
+          <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+            <a href="https://linkedin.com/in/ariel-meneses" target="_blank" rel="noopener noreferrer"
+              style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".7rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "#556677", textDecoration: "none", transition: "color .2s" }}
+              onMouseEnter={e => e.target.style.color = "#00e5ff"} onMouseLeave={e => e.target.style.color = "#556677"}>
+              LinkedIn
+            </a>
+            <div style={{ display: "flex", gap: ".35rem" }}>
+              <button className={`lang-btn ${lang === "en" ? "lang-on" : "lang-off"}`} onClick={() => setLang("en")}>EN</button>
+              <button className={`lang-btn ${lang === "es" ? "lang-on" : "lang-off"}`} onClick={() => setLang("es")}>ES</button>
+            </div>
           </div>
         </div>
       </nav>
@@ -383,6 +394,10 @@ export default function Portfolio() {
               </Fade>
             ))}
           </div>
+          <Fade delay={0.45} style={{ textAlign: "center", marginTop: "3.5rem" }}>
+            <p style={{ fontFamily: "'Outfit',sans-serif", color: "#556677", fontSize: ".9rem", marginBottom: "1.25rem" }}>{t.services_cta_sub}</p>
+            <button className="btn-p" onClick={() => go("contact")}>{t.services_cta}</button>
+          </Fade>
         </div>
       </section>
 
@@ -474,10 +489,14 @@ export default function Portfolio() {
         <div style={{ maxWidth: 1160, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
           <p style={{ fontFamily: "'Outfit',sans-serif", color: "#2d4050", fontSize: ".75rem" }}>{t.footer}</p>
           <div style={{ display: "flex", gap: "1.5rem" }}>
-            {["GitHub", "LinkedIn"].map(s => (
-              <span key={s} style={{ fontFamily: "'Outfit',sans-serif", color: "#2d4050", fontSize: ".75rem", cursor: "pointer", transition: "color .2s" }}
+            {[
+              { label: "GitHub", href: "https://github.com/Ariel-Meneses" },
+              { label: "LinkedIn", href: "https://linkedin.com/in/ariel-meneses" },
+            ].map(s => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                style={{ fontFamily: "'Outfit',sans-serif", color: "#2d4050", fontSize: ".75rem", textDecoration: "none", transition: "color .2s" }}
                 onMouseEnter={e => e.target.style.color = "#00e5ff"}
-                onMouseLeave={e => e.target.style.color = "#2d4050"}>{s}</span>
+                onMouseLeave={e => e.target.style.color = "#2d4050"}>{s.label}</a>
             ))}
           </div>
         </div>
