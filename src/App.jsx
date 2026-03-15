@@ -15,7 +15,7 @@ const T = {
       "My mission: help businesses leverage AI and automation to eliminate manual work, unify their data, and make smarter decisions — without disrupting what already works.",
       "Currently building a consultancy bridging the Chilean and U.S. markets with practical, scalable AI solutions.",
     ],
-    stats: [{ n: "3", l: "Active Projects" }, { n: "100%", l: "Remote" }, { n: "CL+US", l: "Markets" }],
+    stats: [{ n: "4", l: "Active Projects" }, { n: "100%", l: "Remote" }, { n: "CL+US", l: "Markets" }],
     services_label: "Services",
     services_title: "What I build for you",
     services: [
@@ -36,7 +36,41 @@ const T = {
     ],
     projects_label: "Projects",
     projects_title: "Case Studies",
-    projects_empty: "Case studies coming soon — currently in active development.",
+    projects: [
+      {
+        icon: "📊",
+        tag: "Infrastructure · Monitoring",
+        t: "UNAB Network Dashboard",
+        d: "Real-time monitoring dashboard tracking ~360 devices across 4 university campuses in Providencia, Chile. Includes switches, servers, DVRs, turnstiles, security barriers, and booking systems — all unified in a single view with continuous ping.",
+        stack: ["HTML", "MariaDB", "SQL", "RustDesk", "Linux Server"],
+        status: "Live · Internal",
+      },
+      {
+        icon: "🌐",
+        tag: "E-commerce · Retail",
+        t: "Alepineda Insumos — Joyería",
+        d: "Full implementation of the online sales channel for a jewelry supplies company. Covers store configuration, product catalog, payment methods, nationwide shipping, and SEO optimization. Currently scaling toward paid advertising.",
+        stack: ["Tiendanube", "SEO", "Photo Automation", "E-commerce"],
+        status: "Live · alepineda.cl",
+        url: "https://www.alepineda.cl",
+      },
+      {
+        icon: "🏗️",
+        tag: "Web App · Construction",
+        t: "AJJ Remodelaciones",
+        d: "Web application for project management in a painting and remodeling company. Automates workflows, tracks project status, and centralizes client and job data — deployed on Vercel with end-to-end testing.",
+        stack: ["Node.js", "pnpm", "Vercel", "Playwright", "Lighthouse CI"],
+        status: "In Development",
+      },
+      {
+        icon: "📄",
+        tag: "Automation · Gov Data",
+        t: "CECA — Document Automation",
+        d: "Automated pipeline that extracts and processes regulatory data from Chilean government websites, structures it, and generates formatted DOCX reports — eliminating hours of manual document production.",
+        stack: ["Python", "Web Scraping", "DOCX Generation", "Gov APIs"],
+        status: "Active",
+      },
+    ],
     contact_label: "Contact",
     contact_title: "Let's work together",
     contact_sub: "Available for freelance projects and consulting engagements — Chile & United States.",
@@ -60,7 +94,7 @@ const T = {
       "Mi misión: ayudar a empresas a aprovechar la IA y la automatización para eliminar el trabajo manual, unificar sus datos y tomar decisiones más inteligentes — sin interrumpir lo que ya funciona.",
       "Actualmente construyendo una consultoría que conecta los mercados chileno y estadounidense con soluciones de IA prácticas y escalables.",
     ],
-    stats: [{ n: "3", l: "Proyectos Activos" }, { n: "100%", l: "Remoto" }, { n: "CL+US", l: "Mercados" }],
+    stats: [{ n: "4", l: "Proyectos Activos" }, { n: "100%", l: "Remoto" }, { n: "CL+US", l: "Mercados" }],
     services_label: "Servicios",
     services_title: "Lo que construyo para ti",
     services: [
@@ -81,7 +115,41 @@ const T = {
     ],
     projects_label: "Proyectos",
     projects_title: "Casos de Estudio",
-    projects_empty: "Casos de estudio próximamente — actualmente en desarrollo activo.",
+    projects: [
+      {
+        icon: "📊",
+        tag: "Infraestructura · Monitoreo",
+        t: "Dashboard de Red UNAB",
+        d: "Dashboard de monitoreo en tiempo real que supervisa ~360 dispositivos en 4 campus universitarios en Providencia. Incluye switches, servidores, DVRs, torniquetes, barreras de seguridad y sistemas de booking — todo en una sola vista con ping constante.",
+        stack: ["HTML", "MariaDB", "SQL", "RustDesk", "Servidor Linux"],
+        status: "En producción · Interno",
+      },
+      {
+        icon: "🌐",
+        tag: "E-commerce · Retail",
+        t: "Alepineda Insumos — Joyería",
+        d: "Implementación completa del canal de ventas online para empresa de insumos de joyería. Abarca configuración de tienda, catálogo, medios de pago, envíos a todo Chile y optimización SEO. En proceso de escalamiento hacia publicidad pagada.",
+        stack: ["Tiendanube", "SEO", "Automatización de Fotos", "E-commerce"],
+        status: "En vivo · alepineda.cl",
+        url: "https://www.alepineda.cl",
+      },
+      {
+        icon: "🏗️",
+        tag: "Aplicación Web · Construcción",
+        t: "AJJ Remodelaciones",
+        d: "Aplicación web de gestión de proyectos para empresa de pintura y remodelación. Automatiza flujos de trabajo, hace seguimiento del estado de los proyectos y centraliza datos de clientes y trabajos — desplegada en Vercel con testing end-to-end.",
+        stack: ["Node.js", "pnpm", "Vercel", "Playwright", "Lighthouse CI"],
+        status: "En Desarrollo",
+      },
+      {
+        icon: "📄",
+        tag: "Automatización · Datos Gov",
+        t: "CECA — Automatización Documental",
+        d: "Pipeline automatizado que extrae y procesa datos normativos de sitios del gobierno de Chile, los estructura y genera informes DOCX formateados — eliminando horas de producción manual de documentos.",
+        stack: ["Python", "Web Scraping", "Generación DOCX", "APIs Gov"],
+        status: "Activo",
+      },
+    ],
     contact_label: "Contacto",
     contact_title: "Trabajemos juntos",
     contact_sub: "Disponible para proyectos freelance y consultorías — Chile y Estados Unidos.",
@@ -353,12 +421,34 @@ export default function Portfolio() {
             <p className="sec-label">{t.projects_label}</p>
             <h2 className="sec-title" style={{ marginBottom: "3.5rem" }}>{t.projects_title}</h2>
           </Fade>
-          <Fade delay={.1}>
-            <div style={{ border: "1px dashed #0f1e2e", borderRadius: 10, padding: "5rem 2rem", textAlign: "center" }}>
-              <div style={{ fontSize: "2rem", marginBottom: "1rem", opacity: .4 }}>🚧</div>
-              <p style={{ fontFamily: "'Outfit',sans-serif", color: "#445566", fontSize: ".88rem", letterSpacing: ".03em" }}>{t.projects_empty}</p>
-            </div>
-          </Fade>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.2rem" }}>
+            {t.projects.map((p, i) => (
+              <Fade key={i} delay={i * .08}>
+                <div className="card" style={{ height: "100%", display: "flex", flexDirection: "column", gap: ".75rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+                    <div style={{ fontSize: "1.5rem" }}>{p.icon}</div>
+                    <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".65rem", fontWeight: 600, color: "#00e5ff", letterSpacing: ".1em", textTransform: "uppercase", opacity: .7 }}>{p.status}</span>
+                  </div>
+                  <div>
+                    <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".65rem", fontWeight: 600, color: "#334455", letterSpacing: ".12em", textTransform: "uppercase", marginBottom: ".4rem" }}>{p.tag}</p>
+                    <h3 style={{ fontFamily: "'Fraunces',serif", fontWeight: 700, fontSize: "1.05rem", color: "#dde6f0" }}>{p.t}</h3>
+                  </div>
+                  <p style={{ fontFamily: "'Outfit',sans-serif", color: "#556677", fontSize: ".855rem", lineHeight: 1.78, flex: 1 }}>{p.d}</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: ".4rem", marginTop: ".25rem" }}>
+                    {p.stack.map((s, j) => <span key={j} className="tag">{s}</span>)}
+                  </div>
+                  {p.url && (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer"
+                      style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".75rem", color: "#00e5ff", textDecoration: "none", letterSpacing: ".05em", marginTop: ".25rem", opacity: .8 }}
+                      onMouseEnter={e => e.target.style.opacity = 1}
+                      onMouseLeave={e => e.target.style.opacity = .8}>
+                      → {p.url.replace("https://", "")}
+                    </a>
+                  )}
+                </div>
+              </Fade>
+            ))}
+          </div>
         </div>
       </section>
 
