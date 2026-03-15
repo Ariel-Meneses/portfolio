@@ -270,7 +270,7 @@ export default function Portfolio() {
             ))}
           </div>
           <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-            <a href="https://linkedin.com/in/ariel-meneses" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/arielmenesesrojas/" target="_blank" rel="noopener noreferrer"
               style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".7rem", fontWeight: 600, letterSpacing: ".1em", textTransform: "uppercase", color: "#556677", textDecoration: "none", transition: "color .2s" }}
               onMouseEnter={e => e.target.style.color = "#00e5ff"} onMouseLeave={e => e.target.style.color = "#556677"}>
               LinkedIn
@@ -491,7 +491,7 @@ export default function Portfolio() {
           <div style={{ display: "flex", gap: "1.5rem" }}>
             {[
               { label: "GitHub", href: "https://github.com/Ariel-Meneses" },
-              { label: "LinkedIn", href: "https://linkedin.com/in/ariel-meneses" },
+              { label: "LinkedIn", href: "https://www.linkedin.com/in/arielmenesesrojas/" },
             ].map(s => (
               <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                 style={{ fontFamily: "'Outfit',sans-serif", color: "#2d4050", fontSize: ".75rem", textDecoration: "none", transition: "color .2s" }}
