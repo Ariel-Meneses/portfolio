@@ -38,37 +38,33 @@ const T = {
     projects_title: "Case Studies",
     projects: [
       {
-        icon: "📊",
         tag: "Infrastructure · Monitoring",
         t: "UNAB Network Dashboard",
-        d: "Real-time monitoring dashboard tracking ~360 devices across 4 university campuses in Providencia, Chile. Includes switches, servers, DVRs, turnstiles, security barriers, and booking systems — all unified in a single view with continuous ping.",
+        d: "Real-time monitoring dashboard tracking ~360 devices across 4 university campuses in Providencia, Chile. Covers switches, servers, DVRs, turnstiles, security barriers, and booking systems — all consolidated in a single internal view with continuous ping and MariaDB-backed logging.",
         stack: ["HTML", "MariaDB", "SQL", "RustDesk", "Linux Server"],
         status: "Live · Internal",
       },
       {
-        icon: "🌐",
         tag: "E-commerce · Retail",
         t: "Alepineda Insumos — Joyería",
-        d: "Full implementation of the online sales channel for a jewelry supplies company. Covers store configuration, product catalog, payment methods, nationwide shipping, and SEO optimization. Currently scaling toward paid advertising.",
-        stack: ["Tiendanube", "SEO", "Photo Automation", "E-commerce"],
+        d: "End-to-end implementation of the online sales channel for a jewelry supplies company. Covers store setup, product catalog, payment methods, nationwide shipping, SEO, and an automated photo editing pipeline for product images. Currently scaling toward paid advertising.",
+        stack: ["Tiendanube", "SEO", "Process Automation", "E-commerce"],
         status: "Live · alepineda.cl",
         url: "https://www.alepineda.cl",
       },
       {
-        icon: "🏗️",
-        tag: "Web App · Construction",
-        t: "AJJ Remodelaciones",
-        d: "Web application for project management in a painting and remodeling company. Automates workflows, tracks project status, and centralizes client and job data — deployed on Vercel with end-to-end testing.",
-        stack: ["Node.js", "pnpm", "Vercel", "Playwright", "Lighthouse CI"],
-        status: "In Development",
+        tag: "AI Agents · Microsoft 365",
+        t: "CECA — AI Agent Ecosystem",
+        d: "Designed and implemented a multi-agent AI system on Microsoft 365 and SharePoint for managing a clinical infrastructure project. Architecture includes 3 specialized agents — Civil Engineering, IT Networks & Equipment, and PMO — coordinated by a central Orchestrator with intelligent query routing. Each agent operates on a strict 4-layer knowledge model separating professional expertise, Chilean regulatory framework (NCh, OGUC, Ley 19.886), and live project documentation stored as the single source of truth in SharePoint.",
+        stack: ["Microsoft 365", "SharePoint", "Copilot Studio", "MS Project", "PMI / PMBOK"],
+        status: "Active",
       },
       {
-        icon: "📄",
-        tag: "Automation · Gov Data",
-        t: "CECA — Document Automation",
-        d: "Automated pipeline that extracts and processes regulatory data from Chilean government websites, structures it, and generates formatted DOCX reports — eliminating hours of manual document production.",
-        stack: ["Python", "Web Scraping", "DOCX Generation", "Gov APIs"],
-        status: "Active",
+        tag: "Web App · Construction",
+        t: "AJJ Remodelaciones",
+        d: "Web application for project management in a painting and remodeling company. Automates workflows, tracks project status, and centralizes client and job data — deployed on Vercel with end-to-end testing via Playwright and performance audits via Lighthouse CI.",
+        stack: ["Node.js", "pnpm", "Vercel", "Playwright", "Lighthouse CI"],
+        status: "In Development",
       },
     ],
     contact_label: "Contact",
@@ -117,37 +113,33 @@ const T = {
     projects_title: "Casos de Estudio",
     projects: [
       {
-        icon: "📊",
         tag: "Infraestructura · Monitoreo",
         t: "Dashboard de Red UNAB",
-        d: "Dashboard de monitoreo en tiempo real que supervisa ~360 dispositivos en 4 campus universitarios en Providencia. Incluye switches, servidores, DVRs, torniquetes, barreras de seguridad y sistemas de booking — todo en una sola vista con ping constante.",
+        d: "Dashboard de monitoreo en tiempo real que supervisa ~360 dispositivos en 4 campus universitarios en Providencia. Cubre switches, servidores, DVRs, torniquetes, barreras de seguridad y sistemas de booking — todo consolidado en una sola vista interna con ping constante y registro en MariaDB.",
         stack: ["HTML", "MariaDB", "SQL", "RustDesk", "Servidor Linux"],
         status: "En producción · Interno",
       },
       {
-        icon: "🌐",
         tag: "E-commerce · Retail",
         t: "Alepineda Insumos — Joyería",
-        d: "Implementación completa del canal de ventas online para empresa de insumos de joyería. Abarca configuración de tienda, catálogo, medios de pago, envíos a todo Chile y optimización SEO. En proceso de escalamiento hacia publicidad pagada.",
-        stack: ["Tiendanube", "SEO", "Automatización de Fotos", "E-commerce"],
+        d: "Implementación end-to-end del canal de ventas online para empresa de insumos de joyería. Abarca configuración de tienda, catálogo de productos, medios de pago, envíos a todo Chile, SEO y pipeline automatizado de edición fotográfica para los productos. En proceso de escalamiento hacia publicidad pagada.",
+        stack: ["Tiendanube", "SEO", "Automatización de Procesos", "E-commerce"],
         status: "En vivo · alepineda.cl",
         url: "https://www.alepineda.cl",
       },
       {
-        icon: "🏗️",
-        tag: "Aplicación Web · Construcción",
-        t: "AJJ Remodelaciones",
-        d: "Aplicación web de gestión de proyectos para empresa de pintura y remodelación. Automatiza flujos de trabajo, hace seguimiento del estado de los proyectos y centraliza datos de clientes y trabajos — desplegada en Vercel con testing end-to-end.",
-        stack: ["Node.js", "pnpm", "Vercel", "Playwright", "Lighthouse CI"],
-        status: "En Desarrollo",
+        tag: "Agentes IA · Microsoft 365",
+        t: "CECA — Ecosistema de Agentes IA",
+        d: "Diseño e implementación de un sistema multiagente sobre Microsoft 365 y SharePoint para la gestión de un proyecto de infraestructura clínica. La arquitectura incluye 3 agentes especializados — Ingeniería Civil, Redes TI y Equipamiento, y PMO — coordinados por un Orquestador central con enrutamiento inteligente de consultas. Cada agente opera bajo un modelo de 4 capas que separa el conocimiento profesional, el marco normativo chileno (NCh, OGUC, Ley 19.886) y la documentación viva del proyecto almacenada como fuente única de verdad en SharePoint.",
+        stack: ["Microsoft 365", "SharePoint", "Copilot Studio", "MS Project", "PMI / PMBOK"],
+        status: "Activo",
       },
       {
-        icon: "📄",
-        tag: "Automatización · Datos Gov",
-        t: "CECA — Automatización Documental",
-        d: "Pipeline automatizado que extrae y procesa datos normativos de sitios del gobierno de Chile, los estructura y genera informes DOCX formateados — eliminando horas de producción manual de documentos.",
-        stack: ["Python", "Web Scraping", "Generación DOCX", "APIs Gov"],
-        status: "Activo",
+        tag: "Aplicación Web · Construcción",
+        t: "AJJ Remodelaciones",
+        d: "Aplicación web de gestión de proyectos para empresa de pintura y remodelación. Automatiza flujos de trabajo, hace seguimiento del estado de los proyectos y centraliza datos de clientes y trabajos — desplegada en Vercel con testing end-to-end via Playwright y auditorías de rendimiento con Lighthouse CI.",
+        stack: ["Node.js", "pnpm", "Vercel", "Playwright", "Lighthouse CI"],
+        status: "En Desarrollo",
       },
     ],
     contact_label: "Contacto",
@@ -424,14 +416,16 @@ export default function Portfolio() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.2rem" }}>
             {t.projects.map((p, i) => (
               <Fade key={i} delay={i * .08}>
-                <div className="card" style={{ height: "100%", display: "flex", flexDirection: "column", gap: ".75rem" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                    <div style={{ fontSize: "1.5rem" }}>{p.icon}</div>
-                    <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".65rem", fontWeight: 600, color: "#00e5ff", letterSpacing: ".1em", textTransform: "uppercase", opacity: .7 }}>{p.status}</span>
+                <div className="card" style={{ height: "100%", display: "flex", flexDirection: "column", gap: ".75rem", borderTop: "2px solid #00e5ff18" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span style={{ fontFamily: "'Fraunces',serif", fontWeight: 900, fontSize: ".75rem", color: "#00e5ff", opacity: .35, letterSpacing: ".05em" }}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".6rem", fontWeight: 600, color: "#00e5ff", letterSpacing: ".12em", textTransform: "uppercase", opacity: .55, background: "#00e5ff0d", padding: ".2rem .6rem", borderRadius: 4 }}>{p.status}</span>
                   </div>
                   <div>
-                    <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".65rem", fontWeight: 600, color: "#334455", letterSpacing: ".12em", textTransform: "uppercase", marginBottom: ".4rem" }}>{p.tag}</p>
-                    <h3 style={{ fontFamily: "'Fraunces',serif", fontWeight: 700, fontSize: "1.05rem", color: "#dde6f0" }}>{p.t}</h3>
+                    <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: ".62rem", fontWeight: 600, color: "#2a3d50", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: ".4rem" }}>{p.tag}</p>
+                    <h3 style={{ fontFamily: "'Fraunces',serif", fontWeight: 700, fontSize: "1.08rem", color: "#dde6f0" }}>{p.t}</h3>
                   </div>
                   <p style={{ fontFamily: "'Outfit',sans-serif", color: "#556677", fontSize: ".855rem", lineHeight: 1.78, flex: 1 }}>{p.d}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: ".4rem", marginTop: ".25rem" }}>
