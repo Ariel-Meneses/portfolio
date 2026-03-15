@@ -30,9 +30,10 @@ const T = {
     stack_title: "Tools I work with",
     stack_cats: [
       { name: "Automation", tools: ["Make (Integromat)", "Zapier", "n8n", "Python"] },
-      { name: "AI & Agents", tools: ["Claude API", "OpenAI", "LangChain", "Cursor"] },
-      { name: "Data & DBs", tools: ["SQL", "Airtable", "Google Sheets", "Excel"] },
-      { name: "Web & Dev", tools: ["React", "HTML/CSS", "JavaScript", "Node.js"] },
+      { name: "AI & Agents", tools: ["Claude API", "OpenAI", "Copilot Studio", "LangChain"] },
+      { name: "Microsoft 365", tools: ["SharePoint", "MS Project", "Excel", "Teams"] },
+      { name: "Data & DBs", tools: ["SQL", "MariaDB", "Airtable", "Google Sheets"] },
+      { name: "Web & Dev", tools: ["React", "Node.js", "HTML/CSS", "Vercel"] },
     ],
     projects_label: "Projects",
     projects_title: "Case Studies",
@@ -105,9 +106,10 @@ const T = {
     stack_title: "Herramientas con las que trabajo",
     stack_cats: [
       { name: "Automatización", tools: ["Make (Integromat)", "Zapier", "n8n", "Python"] },
-      { name: "IA y Agentes", tools: ["Claude API", "OpenAI", "LangChain", "Cursor"] },
-      { name: "Datos y BDs", tools: ["SQL", "Airtable", "Google Sheets", "Excel"] },
-      { name: "Web y Dev", tools: ["React", "HTML/CSS", "JavaScript", "Node.js"] },
+      { name: "IA y Agentes", tools: ["Claude API", "OpenAI", "Copilot Studio", "LangChain"] },
+      { name: "Microsoft 365", tools: ["SharePoint", "MS Project", "Excel", "Teams"] },
+      { name: "Datos y BDs", tools: ["SQL", "MariaDB", "Airtable", "Google Sheets"] },
+      { name: "Web y Dev", tools: ["React", "Node.js", "HTML/CSS", "Vercel"] },
     ],
     projects_label: "Proyectos",
     projects_title: "Casos de Estudio",
@@ -391,7 +393,7 @@ export default function Portfolio() {
             <p className="sec-label">{t.stack_label}</p>
             <h2 className="sec-title" style={{ marginBottom: "3.5rem" }}>{t.stack_title}</h2>
           </Fade>
-          <div className="four-col" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "1.2rem" }}>
+          <div className="four-col" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: "1.2rem" }}>
             {t.stack_cats.map((cat, i) => (
               <Fade key={i} delay={i * .08}>
                 <div className="card">
